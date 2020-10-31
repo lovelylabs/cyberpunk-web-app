@@ -2,6 +2,7 @@ import SignUp from './pages/SignUp'
 import Profile from './pages/Profile'
 import Login from './pages/Login'
 import ProfileRedirect from './router/ProfileRedirect'
+import PrivateRoute from './router/PrivateRoute'
 import Header from './components/Header'
 import { Route, Switch, BrowserRouter, Redirect } from 'react-router-dom'
 import './firebase/config'
@@ -23,7 +24,10 @@ function App() {
                         exact
                         path='/signup'
                         component={SignUp}></ProfileRedirect>
-                    <Route exact path='/profile/:id' component={Profile}></Route>
+                    <PrivateRoute
+                        exact
+                        path='/profile/:id'
+                        component={Profile}></PrivateRoute>
                     <ProfileRedirect
                         exact
                         path='/login'
