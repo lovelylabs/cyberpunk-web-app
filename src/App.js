@@ -1,3 +1,4 @@
+import CssBaseline from '@material-ui/core/CssBaseline'
 import SignUp from './pages/SignUp'
 import Profile from './pages/Profile'
 import Login from './pages/Login'
@@ -13,6 +14,7 @@ import './App.css'
 function App() {
     return (
         <UserProvider>
+            <CssBaseline></CssBaseline>
             <BrowserRouter>
                 <Header></Header>
                 <div className='App'>
